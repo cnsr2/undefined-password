@@ -32,7 +32,6 @@ namespace undefined_password.Controllers
         [HttpPost("CreatePw")]
         public async Task<ActionResult<CreatePassword>> CreatePassword(CreatePasswordDto _pwDto)
         {
-            Console.WriteLine(_db.CreatePasswords.LongCount());
             CreatePassword createdPassword = new CreatePassword
             {
                 UserId = _pwDto.UserId,
@@ -235,10 +234,6 @@ namespace undefined_password.Controllers
                 Passwords = arrayDto,
             };
             return denemeDto;
-
         }
-
-
-
     }
 }
